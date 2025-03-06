@@ -94,7 +94,7 @@ This file will have the following format:
 # Generated Sun Feb 09 16:31:59 GMT 2025 [seed=1739118718494]
 # table.xml
 state	 table
-0	"111010100110010100001111000010001010001110100000110000001100101101001000100011111101110001100"
+0	    "111010100110010100001111000010001010001110100000110000001100101101001000100011111101110001100"
 1000	"101000001010001000110010011101001011000101110100100101101111001011100001000111001110101011110"
 ...
 ```
@@ -116,7 +116,7 @@ for line in open('table.table.states.log'):
     i += 1
 
 for item in dict.items():
-    # Instead of hard coding the number of samples, we should tie to i, since the number of samples should always be i-3
+    # Instead of hard coding the number of samples, we should tie to i, since the number of samples should always be i-4
     print(round(item[1] / float(10001), 3))
 ```
 
