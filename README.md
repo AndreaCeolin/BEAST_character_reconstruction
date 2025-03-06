@@ -63,11 +63,11 @@ Skip these sections.
 - You can modify the **tree sampling process length** and **character state sampling frequency**, but default settings are reasonable.
 
 ### Generate BEAST File
-Finally, click on `Generate BEAST File…` to generate the `table.yml` file, which will be used in the BEAST analysis.
+Finally, click on `Generate BEAST File…` to generate the `table.xml` file, which will be used in the BEAST analysis.
 
 ## 3. Running the BEAST Analysis
 
-Running the phylogenetic analysis should be as easy as launching BEAST and selecting the `table.yml` file generated in the previous step as the source of the data. However, on my MacBook Air (M1, 2020), I encountered the following error:
+Running the phylogenetic analysis should be as easy as launching BEAST and selecting the `table.xml` file generated in the previous step as the source of the data. However, on my MacBook Air (M1, 2020), I encountered the following error:
 
 > "Fatal exception: No acceptable BEAGLE library plugins found. Make sure that BEAGLE is properly installed or try changing resource requirements"
 
@@ -118,6 +118,7 @@ for line in open('table.table.states.log'):
     i += 1
 
 for item in dict.items():
+    # Instead of hard coding the number of samples, we should tie to i, since the number of samples should always be i-3
     print(round(item[1] / float(10001), 3))
 ```
 
