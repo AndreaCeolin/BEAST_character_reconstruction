@@ -1,5 +1,3 @@
-# BEAST_character_reconstruction
-
 # Ancestral State Reconstruction using BEAST
 
 This tutorial summarises the steps needed to perform ancestral state reconstruction using BEAST v.1 ([BEAST X](https://beast.community)). Note that BEAST v.2 ([BEAST 2](http://www.beast2.org)) does not support state reconstruction.
